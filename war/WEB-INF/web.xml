@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?><web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
 	<servlet>
-		<servlet-name>GTranslator</servlet-name>
-		<servlet-class>com.uestc.gtranslator.GTranslatorServlet</servlet-class>
+		<servlet-name>RegisterServlet</servlet-name>
+		<servlet-class>com.uestc.gtranslator.RegisterServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>GTranslator</servlet-name>
-		<url-pattern>/gtranslator</url-pattern>
+		<servlet-name>RegisterServlet</servlet-name>
+		<url-pattern>/register</url-pattern>
+	</servlet-mapping>
+		<servlet>
+		<servlet-name>RegisterDupServlet</servlet-name>
+		<servlet-class>com.uestc.gtranslator.RegisterDupServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RegisterDupServlet</servlet-name>
+		<url-pattern>/registerdup</url-pattern>
 	</servlet-mapping>
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>

@@ -1,4 +1,4 @@
-package com.uestc.gtranslator;
+package org.uestc.gtranslator;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -16,17 +16,11 @@ import com.google.appengine.api.datastore.Entity;
 import com.google.appengine.api.datastore.Key;
 import com.google.appengine.api.datastore.KeyFactory;
 
+import static org.uestc.gtranslator.Data.*;
+
 @SuppressWarnings("serial")
 public class RegisterServlet extends HttpServlet {
 	// 用户名密码验证均在客户端完成
-	private static final String USERNAME_TAG = "user_name";	// 获取post数据的key
-	private static final String PASSWD_TAG = "passwd";
-	private static final String USER_KEY_KIND = "user_key_kind";
-	private static final String USER_KEY = "user_key";
-	private static final String USER_ENTITY_KIND = "user";
-	private static final String USER_COL_USERNAME = "username";	// 表中列名
-	private static final String USER_COL_PASSWD = "passwd";
-	private static final String USER_COL_DATE = "date";
 	private SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
 	private TimeZone timezone = TimeZone.getTimeZone("Asia/Shanghai");
 	
@@ -52,7 +46,7 @@ public class RegisterServlet extends HttpServlet {
         datastore.put(greeting);
         
         // 返回注册结果
-        resp.getWriter().write("注册成功");
+        resp.getWriter().write(RESULT_SUCC);
 	}
 	
 }
