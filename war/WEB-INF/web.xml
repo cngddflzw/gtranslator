@@ -7,7 +7,8 @@
 		<servlet-name>RegisterServlet</servlet-name>
 		<url-pattern>/register</url-pattern>
 	</servlet-mapping>
-		<servlet>
+	
+	<servlet>
 		<servlet-name>RegisterDupServlet</servlet-name>
 		<servlet-class>org.uestc.gtranslator.RegisterDupServlet</servlet-class>
 	</servlet>
@@ -15,18 +16,47 @@
 		<servlet-name>RegisterDupServlet</servlet-name>
 		<url-pattern>/registerdup</url-pattern>
 	</servlet-mapping>
-	</servlet-mapping>
-		<servlet>
+	
+	<servlet>
 		<servlet-name>LoginServlet</servlet-name>
 		<servlet-class>org.uestc.gtranslator.LoginServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>UploadWordsServlet</servlet-name>
+		<url-pattern>/uploadwords</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>UploadWordsServlet</servlet-name>
+		<servlet-class>org.uestc.gtranslator.UploadWordsServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>DlNewWordsServlet</servlet-name>
+		<url-pattern>/dlnewwords</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>DlNewWordsServlet</servlet-name>
+		<servlet-class>org.uestc.gtranslator.DlNewWordsServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>DlHisWordsServlet</servlet-name>
+		<url-pattern>/dlhiswords</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>DlHisWordsServlet</servlet-name>
+		<servlet-class>org.uestc.gtranslator.DlHisWordsServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>LoginServlet</servlet-name>
 		<url-pattern>/login</url-pattern>
 	</servlet-mapping>
+	
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
 	</welcome-file-list>
+	
 	<servlet>
 	 <servlet-name>SystemServiceServlet</servlet-name>
 	 <servlet-class>com.google.api.server.spi.SystemServiceServlet</servlet-class>

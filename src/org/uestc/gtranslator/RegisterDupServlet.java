@@ -36,7 +36,7 @@ public class RegisterDupServlet extends HttpServlet {
 				USER_COL_USERNAME, Query.FilterOperator.EQUAL, userName);
 	    List<Entity> usernames = datastore.prepare(query).asList(FetchOptions.Builder.withLimit(1));
 	    
-	    if (usernames.isEmpty())
+	    if (usernames.size() < 1)
 	    	resp.getWriter().write(RESULT_SUCC);
 	    else
 	    	resp.getWriter().write(RESULT_FAILED);

@@ -37,13 +37,13 @@ public class RegisterServlet extends HttpServlet {
 		// 保存注册信息
 		Key userKey = KeyFactory.createKey(USER_KEY_KIND, USER_KEY);
         String date = sdf.format(new Date());
-        Entity greeting = new Entity(USER_ENTITY_KIND, userKey);
-        greeting.setProperty(USER_COL_USERNAME, userName);
-        greeting.setProperty(USER_COL_PASSWD, passwd);
-        greeting.setProperty(USER_COL_DATE, date);
+        Entity user = new Entity(USER_ENTITY_KIND, userKey);
+        user.setProperty(USER_COL_USERNAME, userName);
+        user.setProperty(USER_COL_PASSWD, passwd);
+        user.setProperty(USER_COL_DATE, date);
 
         DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
-        datastore.put(greeting);
+        datastore.put(user);
         
         // 返回注册结果
         resp.getWriter().write(RESULT_SUCC);
